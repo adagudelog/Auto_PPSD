@@ -250,11 +250,11 @@ class Seismic_Noise_Analysis(object):
 
 if __name__ == '__main__':
     client_RSSB = Client("\\\\168.176.35.177\\archive")
-    parser_RSSB = Parser(os.path.join(os.getcwd(), 'BT_UNALv3.dataless')) 
-    SNA=Seismic_Noise_Analysis(client_RSSB, parser_RSSB, "20160101", "20200423")
+    parser_RSSB = Parser(os.path.join(os.getcwd(), 'BT_UNALv4.dataless')) 
+    SNA=Seismic_Noise_Analysis(client_RSSB, parser_RSSB, "20170101", "20200508")
     # ~ print(SNA.info_by_channel)
     DIR=os.getcwd()
-    SNA.execute(DIR,"RSSB")
+    SNA.execute(DIR,"RSSBv1")
     # ~ SNA.execute()
     # ~ print(SNA.info)
     # ~ SNA.get_streams(network="BT",station="BUPI",location="00",channel="BHN")
